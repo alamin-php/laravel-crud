@@ -1,0 +1,28 @@
+.float-right{
+    float: right;
+    clear: both;
+}
+
+.form-group {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .form-group label {
+    display: block;
+    margin: 5px 0px;
+  }
+  .form-group input {
+	width: 100%;
+}
+.form-group button {
+	width: 20%;
+	border: 1px solid #ddd;
+	margin-top: 10px;
+	float: right;
+	padding: 5px 0px;
+}
+#message p{
+    font-size: 16px;
+    text-align: center;
+    color: green;
+}
