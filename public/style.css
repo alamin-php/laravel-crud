@@ -26,3 +26,9 @@
     text-align: center;
     color: green;
 }
+.text-danger{
+    color: red;
+}
+.text-success{
+    color: green;
+}

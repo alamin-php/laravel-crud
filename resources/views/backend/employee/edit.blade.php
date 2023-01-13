@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Edit Employee') }} <a href="{{ route('employee.index') }}" class="float-right">Employee Table</a></div>
                     <div class="card-body">
-                        <form action="{{ route('employee.update', $employee->id) }}" method="post">
+                        <form action="{{ route('employee.update', $employee->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="">Name</label>
@@ -32,6 +32,22 @@
                             <div class="form-group">
                                 <label for="">Salary</label>
                                 <input type="number" name="salary" value="{{ $employee->salary }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Upload Image</label>
+                                <input type="file" name="photo">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Photo</label>
+                                <input type="hidden" name="old_photo" value="{{ $employee->photo }}">
+                                <img src="{{ asset('files/upload/employee/'.$employee->photo) }}" alt="" srcset="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Status</label>
+                                <select name="active" id="">
+                                    <option value="1" @if($employee->active == true) selected @endif>Enable</option>
+                                    <option value="0" @if($employee->active == false) selected @endif>Disable</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <button type="submit">Update</button>

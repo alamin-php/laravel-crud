@@ -23,6 +23,7 @@ class EmployeeFactory extends Factory
             'age' => $this->faker->numberBetween($min = 18, $max = 40),
             'start_date' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'salary' => $this->faker->numberBetween($min = 30000, $max = 80000),
+            'photo' => $this->faker->imageUrl($width = 640, $height = 480),
             'active' => $this->faker->numberBetween($min = 0, $max = 1),
         ];
     }

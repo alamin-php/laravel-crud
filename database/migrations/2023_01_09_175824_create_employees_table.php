@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('age');
             $table->date('start_date');
             $table->double('salary', 8, 2);
+            $table->string('photo');
             $table->boolean('active')->default(true);
             $table->timestamps();
         });

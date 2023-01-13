@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Add New Employee') }} <a href="{{ route('employee.index') }}" class="float-right">Employee Table</a></div>
                     <div class="card-body">
-                        <form action="{{ route('employee.store') }}" method="post">
+                        <form action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="">Name</label>
@@ -32,6 +32,10 @@
                             <div class="form-group">
                                 <label for="">Salary</label>
                                 <input type="number" name="salary" placeholder="Enter salary amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Upload Image</label>
+                                <input type="file" name="photo" required>
                             </div>
                             <div class="form-group">
                                 <button type="submit">Submit</button>
